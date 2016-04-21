@@ -1,0 +1,31 @@
+.supersonic-navbar-mock {
+  background-color: #00B5FF !important;
+  text-align: center;
+  font-weight: 600;
+}
+super-navbar-title {
+  display: none;
+}
+html, body, body>div {
+  height: 100%;
+}
+a {
+  text-decoration: none;
+}
+
+img {
+  display:block;
+}
+::-webkit-scrollbar {
+  display: compact;
+}
+.list {
+  overflow-x:hidden;
+  -webkit-overflow-scrolling: touch;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+  height: 100%;
+}
+.list.bottom {
+  height: auto;
+}

@@ -1,0 +1,10 @@
+.DS_Store
+/dist
+node_modules
+bower_components
+.sass-cache/
+logs/
+.sass-cache
+/npm-debug.log
+/tern-project
+.idea/

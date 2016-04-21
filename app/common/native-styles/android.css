@@ -1,0 +1,108 @@
+/***********************************************************
+ * These styles apply for native components on Android.
+ * Read more about native styles at http://docs.appgyver.com
+ ***********************************************************/
+
+navigation-bar {
+  background-color: #f57141;
+  color: #ffffff;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+navigation-bar title {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+navigation-bar button {
+  color: #ffffff;
+  font-weight: 300;
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+navigation-bar back-indicator {
+  background-image: url(default_back_icon.png);
+  background-size: 32px;
+}
+
+navigation-bar back-button {
+  color: #ffffff;
+  font-weight: 300;
+}
+
+/**************************************
+ *  Tab Bar
+ *************************************/
+
+tab-bar {
+  background-color: #ffffff;
+  border-top: 1px #d8d8d8 solid;
+}
+
+tab-bar tab-bar-item {
+  color: #b0b1b4;
+  font-family: "Roboto";
+  font-size: 10px;
+  -webkit-filter: grayscale(56%);
+}
+
+tab-bar tab-bar-item:selected {
+  color: #f57141;
+  -webkit-filter: none;
+}
+
+tab-bar divider {
+  background-color: #D8D8D8;
+}
+
+tab-bar tab-bar-item marker-top:selected {
+  background-color: #f57141;
+}
+
+navigation-bar .search {
+  background-image: url(/image/magnifier_icon.png);
+  background-color: #CCC;
+}
+
+tab-bar-item {
+  background-size: 60px 60px;
+}
+
+tab-bar-item:selected {
+  background-size: 60px 60px;
+}
+
+tab-bar-item#explore {
+  background-image: url(/image/explore.png);
+}
+
+tab-bar-item#explore:selected {
+  background-image: url(/image/explore-selected.png);
+}
+
+tab-bar-item#index {
+  background-image: url(/image/home.png);
+}
+
+tab-bar-item#index:selected {
+  background-image: url(/image/home-selected.png);
+}
+
+tab-bar-item#message {
+  background-image: url(/image/message.png);
+}
+
+tab-bar-item#message:selected {
+  background-image: url(/image/message-selected.png);
+}
+
+tab-bar-item#mine {
+  background-image: url(/image/mine.png);
+}
+
+tab-bar-item#mine:selected {
+  background-image: url(/image/mine-selected.png);
+}

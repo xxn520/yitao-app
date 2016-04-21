@@ -1,0 +1,57 @@
+/***********************************************************
+ * These styles apply for native components on iOS.
+ * Read more about native styles at http://docs.appgyver.com
+ ***********************************************************/
+
+navigation-bar {
+  background-color: #f57141;
+  color: #ffffff;
+}
+
+navigation-bar title {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+navigation-bar button, navigation-bar back-bar-button {
+  color: #ffffff;
+  font-weight: 300;
+}
+
+tab-bar {
+  background-color: #ffffff;
+  border-top: 1px #d8d8d8 solid;
+  color: #f57141;
+}
+
+tab-bar tab-bar-item {
+  color: #b0b1b4;
+  font-size: 10px;
+  background-size: 30px;
+}
+
+tab-bar tab-bar-item:selected {
+  color: #f57141;
+  background-size: 30px;
+}
+
+navigation-bar .search icon {
+  background-image: url(/image/magnifier_icon1.png);
+}
+
+tab-bar-item#explore {
+  background-image: url(/image/explore.png);
+}
+
+tab-bar-item#index {
+  background-image: url(/image/home.png);
+}
+
+tab-bar-item#message {
+  background-image: url(/image/message.png);
+}
+
+tab-bar-item#mine {
+  background-image: url(/image/mine.png);
+}
