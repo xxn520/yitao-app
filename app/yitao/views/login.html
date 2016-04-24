@@ -1,0 +1,28 @@
+<div ng-controller="LoginController">
+    <super-navbar>
+        <super-navbar-title>登陆</super-navbar-title>
+    </super-navbar>
+    <div class="news_background">
+        <form name="form" ng-submit="login()" role="form">
+            <div class="list sign">
+                <label class="item item-icon-left item-input">
+                    <img class="user" src="/image/user.png">
+                    <input name="username" id="username" ng-model="username" type="text" placeholder="手机号/邮箱" required style="margin-left: 20px;">
+                </label>
+                <label class="item item-icon-left item-input">
+                    <img class="password" src="/image/password.png">
+                    <input type="password" name="password" id="password" ng-model="password" placeholder="输入密码" required>
+                </label>
+            </div>
+            <div class="button-bar">
+                <a class="button">登录</a>
+                <a class="button">注册</a>
+            </div>
+            <super-navigate location="yitao#shouye">
+                <span class="login login_left">忘记密码？</span>
+            </super-navigate>
+            <super-navigate>
+                <span class="login login_right right" class="buju">手机快捷登陆</span>
+        </form>
+    </div>
+</div>
