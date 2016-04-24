@@ -1,6 +1,6 @@
 <div ng-controller="IndexController">
     <super-navbar>
-        <super-navbar-title>首页</super-navbar-title>
+        <super-navbar-title>益淘</super-navbar-title>
         <super-navbar-button side="right" class="search" location="yitao#search"></super-navbar-button>
     </super-navbar>
     <div class="list">
@@ -13,18 +13,21 @@
             </ul>
             <div class="indicators" rn-carousel-indicators slides="banners" rn-carousel-index="carouselIndex"></div>
         </div>
-        <div class="row" style="height: 120px">
-            <a class="col-33">
-                <p>新品上架</p>
-                <img src="/image/help.png">
+        <div class="spread row">
+            <a class="col-33" href="#">
+                <p class="title">新品上架</p>
+                <p class="intro"></p>
+                <img src="/images/spread-new-products.png">
             </a>
-            <a class="col-33">
-                <p>天天特价</p>
-                <img src="/image/help.png">
+            <a class="col-33" href="#">
+                <p class="title">天天特价</p>
+                <p class="intro"></p>
+                <img src="/images/spread-special-price.png">
             </a>
-            <a class="col-33">
-                <p>商品分类</p>
-                <img src="/image/help.png">
+            <a class="col-33" href="#">
+                <p class="title">商品分类</p>
+                <p class="intro"></p>
+                <img src="/images/spread-category.png">
             </a>
         </div>
         <div class="item item-divider">

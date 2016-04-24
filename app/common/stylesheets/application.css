@@ -33,6 +33,23 @@ img {
     height: auto;
 }
 
+/*首页推广*/
+.spread.row{
+    max-height: 120px;
+    height: 120px;
+}
+
+.spread .col-33{
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.spread p.title{
+    font-size: 18px;
+    font-weight: bold;
+    color: #f57141;
+}
+
 /*轮播*/
 .carousel-images {
     height: 200px;
