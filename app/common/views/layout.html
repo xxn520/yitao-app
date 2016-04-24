@@ -1,25 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-  <meta name="format-detection" content="telephone=no,email=no">
+    <meta charset="utf8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <title><%= yield.viewName %></title>
 
-  <title><%= yield.viewName %></title>
+    <link rel="stylesheet" href="/components/supersonic/css/supersonic.css" />
+    <link rel="stylesheet" href="/components/default/styles/default.css" />
+    <link rel="import" href="/components/supersonic/components/import.html">
 
-  <link rel="stylesheet" href="/components/supersonic/css/supersonic.css" />
-  <link rel="stylesheet" href="/app/common/stylesheets/application.css" />
-  <link rel="import" href="/components/supersonic/components/import.html">
 
-  <script src="http://localhost/cordova.js"></script>
-  <script src="/components/steroids-js/steroids.js"></script>
-  <script src="/components/angular/angular.min.js"></script>
-  <script src="/components/supersonic/supersonic.min.js"></script>
-  <script src="/components/webcomponentsjs/webcomponents.min.js"></script>
-
-  <% _.each(yield.modules, function(module) { %>
-  <script src="/app/<%= module %>.js"></script>
-  <% }); %>
+    <script src="http://localhost/cordova.js"></script>
+    <script src="/components/steroids-js/steroids.js"></script>
+    <script src="/components/angular/angular.js"></script>
+    <script src="/components/supersonic/supersonic.js"></script>
+    <script src="/components/webcomponentsjs/webcomponents.js"></script>
 </head>
 <body ng-app="<%= yield.moduleName %>">
 
@@ -27,7 +23,7 @@
 
 </body>
 </html>
-
+<script src="/components/default/scripts/default.min.js"></script>
 <% _.each(yield.modules, function(module) { %>
 <script src="/app/<%= module %>.js"></script>
 <% }); %>

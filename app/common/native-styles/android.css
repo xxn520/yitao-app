@@ -4,33 +4,60 @@
  ***********************************************************/
 
 navigation-bar {
-  background-color: #f57141;
-  color: #ffffff;
-  padding-left: 6px;
-  padding-right: 6px;
+    background-color: #f57141;
+    color: #ffffff;
+    padding-left: 6px;
+    padding-right: 6px;
 }
 
 navigation-bar title {
-  color: #ffffff;
-  font-size: 18px;
-  font-weight: 600;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 navigation-bar button {
-  color: #ffffff;
-  font-weight: 300;
-  margin-left: 6px;
-  margin-right: 6px;
-}
-
-navigation-bar back-indicator {
-  background-image: url(default_back_icon.png);
-  background-size: 32px;
+    color: #ffffff;
+    font-weight: 300;
+    margin-left: 6px;
+    margin-right: 6px;
 }
 
 navigation-bar back-button {
-  color: #ffffff;
-  font-weight: 300;
+    color: #ffffff;
+    font-size: 0.1;
+    background-image: url(/images/back-btn.png);
+}
+
+navigation-bar .display1, navigation-bar .list {
+    background-image: url(/images/display1-android.png);
+}
+
+navigation-bar .display2, navigation-bar .grid {
+    background-image: url(/images/display2-android.png);
+}
+
+
+navigation-bar .menu {
+    background-image: url(/images/menu-android.png);
+}
+
+navigation-bar .close {
+    background-image: url(/images/close-android.png);
+}
+
+navigation-bar .search {
+    background-image: url(/images/search-android.png);
+}
+navigation-bar .home {
+    background-image: url(/images/home-android.png);
+}
+navigation-bar .like {
+    background-image: url(/images/like-android.png);
+}
+
+navigation-bar .cart {
+    background-image: url(/images/cart-android.png);
 }
 
 /**************************************
@@ -38,71 +65,66 @@ navigation-bar back-button {
  *************************************/
 
 tab-bar {
-  background-color: #ffffff;
-  border-top: 1px #d8d8d8 solid;
+    background-color: #ffffff;
+    border-top: 1px #d8d8d8 solid;
 }
 
 tab-bar tab-bar-item {
-  color: #b0b1b4;
-  font-family: "Roboto";
-  font-size: 10px;
-  -webkit-filter: grayscale(56%);
+    color: #b0b1b4;
+    font-family: "Roboto";
+    font-size: 10px;
+    -webkit-filter: grayscale(56%);
 }
 
 tab-bar tab-bar-item:selected {
-  color: #f57141;
-  -webkit-filter: none;
+    color: #f57141;
+    -webkit-filter: none;
 }
 
 tab-bar divider {
-  background-color: #D8D8D8;
+    background-color: #D8D8D8;
 }
 
 tab-bar tab-bar-item marker-top:selected {
-  background-color: #f57141;
-}
-
-navigation-bar .search {
-  background-image: url(/image/magnifier_icon.png);
-  background-color: #CCC;
+    background-color: #f57141;
 }
 
 tab-bar-item {
-  background-size: 60px 60px;
+    background-size: 60px 60px;
 }
 
 tab-bar-item:selected {
-  background-size: 60px 60px;
+    background-size: 60px 60px;
 }
 
 tab-bar-item#explore {
-  background-image: url(/image/explore.png);
+    background-image: url(/images/explore.png);
 }
 
 tab-bar-item#explore:selected {
-  background-image: url(/image/explore-selected.png);
+    background-image: url(/images/explore-selected.png);
 }
 
 tab-bar-item#index {
-  background-image: url(/image/home.png);
+    background-image: url(/images/home.png);
 }
 
 tab-bar-item#index:selected {
-  background-image: url(/image/home-selected.png);
+    background-image: url(/images/home-selected.png);
 }
 
 tab-bar-item#message {
-  background-image: url(/image/message.png);
+    background-image: url(/images/message.png);
 }
 
 tab-bar-item#message:selected {
-  background-image: url(/image/message-selected.png);
+    background-image: url(/images/message-selected.png);
 }
 
 tab-bar-item#mine {
-  background-image: url(/image/mine.png);
+    background-image: url(/images/mine.png);
 }
 
 tab-bar-item#mine:selected {
-  background-image: url(/image/mine-selected.png);
+    background-image: url(/images/mine-selected.png);
 }

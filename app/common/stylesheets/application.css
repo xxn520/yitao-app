@@ -1,31 +1,104 @@
 .supersonic-navbar-mock {
-  background-color: #00B5FF !important;
-  text-align: center;
-  font-weight: 600;
+    background-color: #00B5FF !important;
+    text-align: center;
+    font-weight: 600;
 }
-super-navbar-title {
-  display: none;
+
+html, body, body > div {
+    height: 100%;
 }
-html, body, body>div {
-  height: 100%;
-}
+
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 img {
-  display:block;
+    display: block;
 }
+
 ::-webkit-scrollbar {
-  display: compact;
+    display: compact;
 }
+
 .list {
-  overflow-x:hidden;
-  -webkit-overflow-scrolling: touch;
-  -webkit-backface-visibility: hidden;
-  -webkit-transform-style: preserve-3d;
-  height: 100%;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+    height: 100%;
+    padding-top: 0px;
 }
+
 .list.bottom {
-  height: auto;
+    height: auto;
+}
+
+/*轮播*/
+.carousel-images {
+    height: 200px;
+    position: relative;
+}
+
+.carousel-images .indicators {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+}
+
+.bgimage {
+    background: no-repeat center center;
+    background-size: 100% auto;
+    max-height: 200px;
+    height: 100%;
+    width: 100%;
+}
+
+ul.carousel1.ng-scope {
+    height: 200px;
+}
+
+span.rn-carousel-control.rn-carousel-control-prev:before, span.rn-carousel-control.rn-carousel-control-next:before {
+    display: inline-block;
+    font-family: "Ionicons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-rendering: auto;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    content: "\f3cf";
+    color: #666;
+}
+
+span.rn-carousel-control.rn-carousel-control-next:before {
+    content: "\f3d1";
+}
+
+span.rn-carousel-control.rn-carousel-control-prev.ng-scope {
+    -webkit-transition: opacity .2s ease-out;
+    transition: opacity .2s ease-out;
+    font-size: 2rem;
+    position: absolute;
+    top: 60px;
+    opacity: .75;
+    cursor: pointer;
+}
+
+span.rn-carousel-control.rn-carousel-control-next.ng-scope {
+    -webkit-transition: opacity .2s ease-out;
+    transition: opacity .2s ease-out;
+    font-size: 2rem;
+    position: absolute;
+    top: 60px;
+    opacity: .75;
+    cursor: pointer;
+}
+
+div.rn-carousel-indicator span.ng-scope {
+    font-size: 1.2em;
+    color: #999;
 }

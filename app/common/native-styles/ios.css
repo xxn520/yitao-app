@@ -10,13 +10,61 @@ navigation-bar {
 
 navigation-bar title {
   color: #ffffff;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
 }
 
 navigation-bar button, navigation-bar back-bar-button {
   color: #ffffff;
-  font-weight: 300;
+  font-weight: 200;
+}
+
+navigation-bar back-button {
+    font-size: 0.1px;
+}
+
+navigation-bar back-indicator {
+    background-image: url(/images/back-btn.png);
+    background-size: 40px 24px;
+    font-size: 0.1px;
+}
+
+navigation-bar .display1 icon, navigation-bar .list icon {
+    background-image: url(/images/display1.png);
+    background-size: 20px;
+}
+
+navigation-bar .display2 icon, navigation-bar .grid icon {
+    background-image: url(/images/display2.png);
+    background-size: 20px;
+}
+
+navigation-bar .menu icon{
+    background-image: url(/images/menu-ios.png);
+    background-size: 20px;
+}
+
+navigation-bar .close icon{
+    background-image: url(/images/close-ios.png);
+    background-size: 20px;
+}
+
+navigation-bar .search icon {
+    background-image: url(/images/search-ios.png);
+    background-size: 20px;
+}
+navigation-bar .home icon{
+    background-image: url(/images/home-ios.png);
+}
+
+navigation-bar .like icon {
+    background-image: url(/images/like-ios.png);
+    background-size: 20px;
+}
+
+navigation-bar .cart icon {
+    background-image: url(/images/cart.png);
+    background-size: 20px;
 }
 
 tab-bar {
@@ -36,22 +84,18 @@ tab-bar tab-bar-item:selected {
   background-size: 30px;
 }
 
-navigation-bar .search icon {
-  background-image: url(/image/magnifier_icon1.png);
-}
-
 tab-bar-item#explore {
-  background-image: url(/image/explore.png);
+  background-image: url(/images/explore.png);
 }
 
 tab-bar-item#index {
-  background-image: url(/image/home.png);
+  background-image: url(/images/home.png);
 }
 
 tab-bar-item#message {
-  background-image: url(/image/message.png);
+  background-image: url(/images/message.png);
 }
 
 tab-bar-item#mine {
-  background-image: url(/image/mine.png);
+  background-image: url(/images/mine.png);
 }
