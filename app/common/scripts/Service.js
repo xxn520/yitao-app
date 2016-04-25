@@ -1,6 +1,6 @@
 angular
     .module('common')
-    .constant("BaseUrl", "http://192.168.253.5:8080/")
+    .constant("BaseUrl", "http://192.168.1.105:8080/")
     .config(
         function (localStorageServiceProvider, RestangularProvider, BaseUrl) {
             localStorageServiceProvider.setPrefix('me.yitao.user')

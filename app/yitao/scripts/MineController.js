@@ -5,9 +5,11 @@ angular
     .module('yitao')
     .controller('MineController', function($scope, supersonic, localStorageService, Restangular, BaseUrl) {
 
-        $scope.userDetail = localStorageService.get('userDetail');
-        
+        $scope.BaseUrl = BaseUrl;
+
         supersonic.ui.views.current.whenVisible(function () {
+            $scope.userDetail = localStorageService.get('userDetail');
+            supersonic.logger.log($scope.BaseUrl+$scope.userDetail.avatar);
             if (!localStorageService.get('authdata')) {
                 supersonic.ui.layers.replace('login');
             }

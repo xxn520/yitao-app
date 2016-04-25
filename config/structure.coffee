@@ -34,6 +34,10 @@ module.exports =
       id: "login"
       location: "yitao#login"
     }
+    {
+      id: "mine"
+      location: "yitao#mine"
+    }
   ]
 
 # drawers:

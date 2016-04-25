@@ -4,12 +4,16 @@
     font-weight: 600;
 }
 
-html, body, body > div {
+html, body, body > div, .container {
     height: 100%;
 }
 
 a {
     text-decoration: none;
+}
+
+.center{
+    text-align: center;
 }
 
 img {
@@ -168,4 +172,44 @@ div.rn-carousel-indicator span.ng-scope {
     font-size: 12px;
     color: black;
     line-height: 25px;
+}
+
+/*登录*/
+.register, .login{
+    height: 100%;
+    width: 100%;
+}
+
+.login-top, .register-top{
+    margin: auto 16px;
+    margin-bottom: 150px;
+    border: 0px;
+    border-bottom: 1px solid #AAAAAA;
+    margin-bottom:15px;
+}
+.register-logo, .login-logo{
+    max-width: 70px;
+    margin:40px auto;
+}
+
+.register-top input, .login-logo input{
+    font-size: 1em;
+}
+
+.register-button, .login-button{
+    width: 70%;
+    margin: 20px auto;
+    border: 1px solid #f57141;
+    border-radius: 20px;
+    color: #ffffff;
+    background-color: #f57141;
+    font-size: 140%;
+}
+
+.send-key{
+    font-size: 90%;
+    color: #1352e2;
+    position: absolute;
+    right: 0;
+    top: 15px;
 }
