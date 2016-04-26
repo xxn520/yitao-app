@@ -9,10 +9,10 @@ angular
 
         supersonic.ui.views.current.whenVisible(function () {
             $scope.userDetail = localStorageService.get('userDetail');
-            supersonic.logger.log($scope.BaseUrl+$scope.userDetail.avatar);
             if (!localStorageService.get('authdata')) {
                 supersonic.ui.layers.replace('login');
             }
+            $scope.$apply();
         });
 
         $scope.logout = function () {
