@@ -18,7 +18,7 @@ angular
 
         $scope.share = function(){
             $cordovaSocialSharing
-            .share("益淘", null, "null", "http://baidu.com") // Share via native share sheet
+            .share("益淘", null, null, "http://baidu.com") // Share via native share sheet
             .then(function(result) {
                 supersonic.ui.dialog.alert("分享成功!");
             }, function(err) {
