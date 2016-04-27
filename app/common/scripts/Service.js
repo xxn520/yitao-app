@@ -1,6 +1,7 @@
 angular
     .module('common')
     .constant("BaseUrl", "http://192.168.253.5:8080/")
+    .constant('authStatus', {'0':'未审核', '1':'审核不通过', '2':'审核通过'})
     .config(
         function (localStorageServiceProvider, RestangularProvider, BaseUrl) {
             localStorageServiceProvider.setPrefix('me.yitao.user')

@@ -1,0 +1,20 @@
+<div ng-controller="StudentAuthController">
+    <super-navbar>
+        <super-navbar-title>学生认证</super-navbar-title>
+    </super-navbar>
+    <div class="register container">
+        <div class="list">
+            <div class="item register-top item-input">
+                <span class="input-label">学号</span>
+                <input type="text" name="sid" ng-model="student_auth.sid">
+            </div>
+            <div class="item register-top item-input">
+                <span class="input-label">姓名</span>
+                <input type="text" name="name" ng-model="student_auth.name">
+            </div>
+            <div class="row">
+                <button ng-click="save()" class="col-90 button logout-button">保存</button>
+            </div>
+        </div>
+    </div>
+</div>

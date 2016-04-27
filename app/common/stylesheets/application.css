@@ -5,6 +5,9 @@
 }
 
 html, body, body > div, .container {
+    margin:0;
+    padding:0;
+    width: 100%;
     height: 100%;
 }
 
@@ -29,8 +32,10 @@ img {
     -webkit-overflow-scrolling: touch;
     -webkit-backface-visibility: hidden;
     -webkit-transform-style: preserve-3d;
+    margin:0;
+    padding:0;
+    width: 100%;
     height: 100%;
-    padding-top: 0px;
 }
 
 .list.bottom {
@@ -175,29 +180,23 @@ div.rn-carousel-indicator span.ng-scope {
 }
 
 /*登录*/
-.register, .login{
-    height: 100%;
-    width: 100%;
-}
-
 .login-top, .register-top{
     margin: auto 16px;
-    margin-bottom: 150px;
     border: 0px;
     border-bottom: 1px solid #AAAAAA;
-    margin-bottom:15px;
 }
 .register-logo, .login-logo{
     max-width: 70px;
-    margin:40px auto;
+    margin:0px auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 .register-top input, .login-logo input{
     font-size: 1em;
 }
 
-.register-button, .login-button{
-    width: 70%;
+.register-button, .login-button, .logout-button{
     margin: 20px auto;
     border: 1px solid #f57141;
     border-radius: 20px;
@@ -212,4 +211,34 @@ div.rn-carousel-indicator span.ng-scope {
     position: absolute;
     right: 0;
     top: 15px;
+}
+
+/*用户详情*/
+.self-avatar{
+    height: 100px;
+    padding-left: 72px;
+    min-height: 72px;
+}
+.self-avatar input{
+    font-size: 1em;
+    color: black;
+}
+.self-avatar>label>img{
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    max-width: 70px;
+    max-height: 70px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.self-input {
+    font-size: 1.0em;
+    padding-right: 0px;
+    margin-top: 20px;
+    text-align : right;
+}
+.self-avatar h2,.self-avatar p{
+    padding: 10px 0px 0px 40px;
 }

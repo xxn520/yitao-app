@@ -3,36 +3,38 @@
         <super-navbar-title>我的</super-navbar-title>
         <super-navbar-button side="right" ng-click="logout()">登出</super-navbar-button>
     </super-navbar>
-    <div class="list">
-        <a class="item item-icon-right userinfo" href="#">
-            <img class="useravatar" ng-src="{{BaseUrl + userDetail.avatar}}" src="/images/avatar.png">
-            <h2>{{userDetail.username}}</h2>
-            <p>未认证</p>
-            <i class="icon super-ios-arrow-right"></i>
-        </a>
-        <div class="item row my-thing">
-            <super-navigate class="col my_col">
-                <img class="my_icon" src="/images/star.png">
-                <p class="my_tip">我的收藏</p>
+    <div class="container">
+        <div class="list">
+            <super-navigate class="item item-icon-right userinfo" location="yitao#user-detail">
+                <img class="useravatar" ng-src="{{BaseUrl + userDetail.avatar}}" src="/images/avatar.png">
+                <h2 ng-bind="::userDetail.username"></h2>
+                <p ng-bind="userDetail.student_auth.status_CN"></p>
+                <i class="icon super-ios-arrow-right"></i>
             </super-navigate>
-            <super-navigate class="col my_col">
-                <img class="my_icon" src="/images/like.png">
-                <p class="my_tip">我的公告</p>
-            </super-navigate>
+            <div class="item row my-thing">
+                <super-navigate class="col my_col">
+                    <img class="my_icon" src="/images/star.png">
+                    <p class="my_tip">我的收藏</p>
+                </super-navigate>
+                <super-navigate class="col my_col">
+                    <img class="my_icon" src="/images/like.png">
+                    <p class="my_tip">我的公告</p>
+                </super-navigate>
+            </div>
+            <ul>
+                <li class="item item-icon-right" ng-click="share()">
+                    <p class="text">分享APP</p>
+                    <i class="icon super-ios-arrow-right"></i>
+                </li>
+                <li class="item item-icon-right">
+                    <p class="text">意见反馈</p>
+                    <i class="icon super-ios-arrow-right"></i>
+                </li>
+                <li class="item item-icon-right">
+                    <p class="text">联系我们</p>
+                    <i class="icon super-ios-arrow-right"></i>
+                </li>
+            </ul>
         </div>
-        <ul>
-            <li class="item item-icon-right">
-                <p class="text">分享APP</p>
-                <i class="icon super-ios-arrow-right"></i>
-            </li>
-            <li class="item item-icon-right">
-                <p class="text">意见反馈</p>
-                <i class="icon super-ios-arrow-right"></i>
-            </li>
-            <li class="item item-icon-right">
-                <p class="text">联系我们</p>
-                <i class="icon super-ios-arrow-right"></i>
-            </li>
-        </ul>
     </div>
 </div>
