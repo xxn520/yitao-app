@@ -25,4 +25,8 @@ angular
             }
         })
 
+        $scope.toCategory = function(){
+            supersonic.ui.layers.push("yitao#all-category");
+        }
+
     });
