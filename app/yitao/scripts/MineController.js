@@ -18,12 +18,16 @@ angular
 
         $scope.share = function(){
             $cordovaSocialSharing
-            .share("益淘", null, null, "http://baidu.com") // Share via native share sheet
+            .share("益淘", null, null, "http://baidu.com")
             .then(function(result) {
                 supersonic.ui.dialog.alert("分享成功!");
             }, function(err) {
                 supersonic.ui.dialog.alert("分享失败!");
             });
+        }
+
+        $scope.feedback = function(){
+            supersonic.ui.layers.push('yitao#feedback');
         }
 
         $scope.logout = function () {
