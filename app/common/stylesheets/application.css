@@ -248,3 +248,41 @@ a.contact{
 .self-avatar h2,.self-avatar p{
     padding: 10px 0px 0px 40px;
 }
+
+/*发现*/
+#r-result,#r-result table{
+    width: 100%;
+}
+
+#r-result{
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: none;
+    height: 300px;
+    overflow-y: auto;
+}
+
+#r-cancel{
+    position: absolute;
+    right: 15px;
+    bottom: 270px;
+    display: none;
+    font-size: 20px;
+    height: 20px;
+    width: 20px;
+    z-index: 10;
+}
+
+.route{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    background-image: url(/images/route.png); ;
+    background-size: 50px;
+    height: 50px;
+    width: 50px;
+    background-color: #3385ff;
+    border-radius: 25px;
+}

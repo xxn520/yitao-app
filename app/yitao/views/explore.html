@@ -1,0 +1,11 @@
+<div ng-controller="ExploreController">
+    <super-navbar>
+        <super-navbar-title>发现</super-navbar-title>
+        <super-navbar-button side="right" class="search" ng-click="superscope.ui.layers.push('yitao#search')"></super-navbar-button>
+    </super-navbar>
+    <div id="map" class="container"></div>
+    <div class="route" ng-click="route()"></div>
+    <div class="super-close-circled" id="r-cancel" ng-click="hideRoute()"></div>
+    <div id="r-result"></div>
+</div>
+<script src="http://api.map.baidu.com/getscript?v=2.0&ak=CZ9hDU2G8MGfXFxU9r9j5G1L"></script>
