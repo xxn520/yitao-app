@@ -1,0 +1,42 @@
+<div class="background" ng-controller="SearchController">
+    <super-navbar>
+        <super-navbar-title>
+            搜索
+        </super-navbar-title>
+    </super-navbar>
+    <div class="bar bar-header item-input-inset">
+        <label class="item-input-wrapper">
+            <i class="icon super-ios-search placeholder-icon"></i>
+            <input type="search" placeholder="请输入关键词" ng-model="keyword" ng-focus="getHistory()" autofocus="autofocus">
+        </label>
+        <button class="button button-clear font-black bolder" ng-click="search()">
+            搜索
+        </button>
+    </div>
+    <div class="list" ng-show="showHistory">
+        <div class="list-content">
+            <div class="item">
+                <p class="search-history">历史搜索</p>
+            </div>
+            <div class="item" ng-repeat="history in histories track by $index" ng-click="search(history)">
+                <p class="search-keywords">{{::history}}</p>
+            </div>
+            <div class="item center" ng-click="clearHistory()">
+                <p class="keywords-clear">清除历史记录</p>
+            </div>
+        </div>
+    </div>
+    <div class="list" ng-hide="showHistory">
+        <div class="list-content">
+            <div class="item order-item" ng-click="toDetail(item.id)" ng-repeat="item in items track by item.id">
+                <img ng-src="{{BaseUrl + item.cover_photo}}">
+                <p class="class-content-font bolder" ng-bind="::item.name"></p>
+                <p><span class="class-content-price" ng-bind="'￥'+ item.price"></span>
+                    <span class="bolder line-through-price" ng-if="item.discount.discount" ng-bind="'￥' + item.discount.discount">
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="text-center" in-view="getItems($inview)" ng-if="loading"><i class="icon super-loading-c"></i> 正在努力加载中...</div>
+</div>

@@ -1,7 +1,7 @@
 <div ng-controller="IndexController">
     <super-navbar>
         <super-navbar-title>益淘</super-navbar-title>
-        <super-navbar-button side="right" class="search" ng-click="superscope.ui.layers.push('yitao#search')"></super-navbar-button>
+        <super-navbar-button side="right" class="search" ng-click="toSearch()"></super-navbar-button>
     </super-navbar>
     <div class="container">
         <div class="list">
@@ -13,15 +13,15 @@
                              class="bgimage"></div>
                     </li>
                 </ul>
-                <div class="indicators" rn-carousel-indicators slides="banners" rn-carousel-index="carouselIndex"></div>
+                <div class="indicators" rn-carousel-indicators slides="brands" rn-carousel-index="carouselIndex"></div>
             </div>
             <div class="spread row">
-                <a class="col-33" href="#">
+                <a class="col-33" href="#" ng-click="toNew()">
                     <p class="title">新品上架</p>
                     <p class="intro"></p>
                     <img src="/images/spread-new-products.png">
                 </a>
-                <a class="col-33" href="#">
+                <a class="col-33" href="#" ng-click="toSpecial()">
                     <p class="title">天天特价</p>
                     <p class="intro"></p>
                     <img src="/images/spread-special-price.png">
@@ -35,23 +35,21 @@
             <div class="item item-divider">
                 猜你喜欢
             </div>
-            <a ng-repeat="recommend in recommends track by $index" class="item item-thumbnail-left" href="#">
+            <a ng-repeat="recommend in recommends track by $index" class="item item-thumbnail-left" href="#" ng-click="toDetail(recommend.id)">
                 <img ng-src="{{BaseUrl + recommend.cover_photo}}">
                 <h2 ng-bind="::recommend.name"></h2>
                 <p>原价 ： <span ng-bind="::recommend.price"></span></p>
                 <p style="color: red;">现价 ： <span ng-bind="::recommend.discount.discount"></span></p>
-                <p>介绍</p>
             </a>
 
             <div class="item item-divider">
                 健康推荐
             </div>
-            <a ng-repeat="health in healths track by $index" class="item item-thumbnail-left" href="#">
+            <a ng-repeat="health in healths track by $index" class="item item-thumbnail-left" href="#" ng-click="toDetail(health.id)">
                 <img ng-src="{{BaseUrl + health.cover_photo}}">
                 <h2 ng-bind="::health.name"></h2>
                 <p>原价 ： <span ng-bind="::health.price"></span></p>
                 <p style="color: red;">现价 ： <span ng-bind="::health.discount.discount"></span></p>
-                <p>介绍</p>
             </a>
         </div>
     </div>

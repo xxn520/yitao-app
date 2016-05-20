@@ -3,14 +3,14 @@
         <super-navbar-title>分类</super-navbar-title>
     </super-navbar>
     <div class="container">
-        <div class="index-classes" ng-repeat="root in tree track by root.id" ng-show="root.children.length">
-            <div ng-click="toAllCategory(root.id)">
+        <div class="index-classes" ng-repeat="root in tree track by root.id" ng-if="root.children.length>0&&root.name!=='特价'&&root.name!=='新品'">
+            <div ng-click="toMore(root.id)">
                 <p class="index-title">{{root.name}}<span class="item-note">更多</span></p>
             </div>
             <div class="index-classes-list row">
                 <div class="index-classes-item col col-25" ng-click="toCategory(category.id)" ng-repeat="category in root.children track by category.id">
                     <img ng-src="{{BaseUrl + category.cover_photo}}">
-                    <p class="center" ng-bind="::category.name"</p>
+                    <p class="center" ng-bind="::category.name"></p>
                 </div>
             </div>
         </div>

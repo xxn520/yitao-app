@@ -81,4 +81,8 @@ angular
             });
         })
 
+        $scope.toSearch = function(id) {
+            supersonic.ui.layers.push("yitao#search");
+        }
+
     });

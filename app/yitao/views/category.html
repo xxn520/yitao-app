@@ -1,0 +1,13 @@
+<div ng-controller="CategoryController">
+    <super-navbar>
+        <super-navbar-title ng-bind="category.name"></super-navbar-title>
+    </super-navbar>
+    <div class="container">
+        <div class="list">
+            <div class="item item-avatar" ng-click="toCategory(item.id)" ng-repeat="item in categories track by item.id">
+                <img ng-src="{{BaseUrl + item.cover_photo}}">
+                <h2 class="padding-left" ng-bind="::item.name"></h2>
+            </div>
+        </div>
+    </div>
+</div>

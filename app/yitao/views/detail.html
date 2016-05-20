@@ -1,0 +1,102 @@
+<div ng-controller="DetailController">
+    <super-navbar>
+        <super-navbar-title>
+            商品详情
+        </super-navbar-title>
+    </super-navbar>
+    <div class="container">
+        <div id="detail-block1">
+            <div class="imagetest" ng-click="showPhotos(product)">
+                <ul rn-carousel rn-carousel-auto-slide rn-carousel-buffered rn-carousel-controls-allow-loop rn-carousel-index="carouselIndex" class="carousel1">
+                    <li ng-repeat="image in product.detail_photo track by $index">
+                        <div ng-style="{'background-image': 'url(' + BaseUrl + image + '?imageView2/1/w/600/h/600)'}"  class="bgimage">
+                        </div>
+                    </li>
+                </ul>
+                <div class="indicators" rn-carousel-indicators slides="product.detail_photo" rn-carousel-index="carouselIndex"></div>
+            </div>
+            <div id="detail-block1-nap">
+                <p id="detail-block1-name" class="bolder" ng-bind="::product.name"></p>
+                <div class="row">
+                    <p class="col col-70">
+                        <span class="class-content-price" ng-bind="'￥'+ product.price"></span>
+                        <span class="bolder line-through-price" ng-bind="'￥' + product.discount.discount" ng-if="product.discount.discount"></span>
+                    </p>
+                    <figure class="col col-30" id="detail-block1-like" ng-click="focus()">
+                        <img src="/images/like(1)-ios.png" ng-if="!stared" style="display: inline">
+                        <img src="/images/like(2)-ios.png" ng-if="stared" style="display: inline">
+                        <span ng-if="!stared">关 注</span>
+                        <span ng-if="stared">已关注</span>
+                    </figure>
+                </div>
+                <div class="row detail-block1-last">
+                    <div class="col">
+                        <p>折扣信息：
+                            <span ng-if="product.discount.introduction" ng-bind="::product.discount.introduction"></span>
+                            <span ng-if="!product.discount.introduction">无</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="detail-background">
+        </div>
+        <div class="detail-block2" ng-style="detailBlock" id="qqq">
+            <div class="row tab-host" id="zzz">
+                <div class="col tab-widget">
+                    <input type="radio" value="1" id="item-detail" ng-model="tabs">
+                    <label for="item-detail">详情</label>
+                    <div class="tab-content" id="aaaa">
+                        <div ng-bind="::product.introduce"></div>
+                        <div id="detail-block3">
+                            <p id="detail-block3-top">同类商品</p>
+                            <div class="grid clearfix">
+                                <div class="item order-item" ng-repeat="item in similarProduct track by item.id" ng-click="toDetail(item.id)">
+                                    <img ng-src="{{BaseUrl + item.cover_photo}}">
+                                    <p class="class-content-font bolder" ng-bind="item.name"></p>
+                                    <p style="min-height: 21px"><span class="class-content-price" ng-bind="'￥'+ item.price"></span><span class="bolder line-through-price" ng-bind="'￥' + item.discount.discount"  ng-if="item.discount.discount"></span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col tab-widget">
+                    <input type="radio" value="2" id="item-comment" ng-model="tabs">
+                    <label for="item-comment">评论</label>
+                    <div class="tab-comment list">
+                        <div class="item">
+                            好评率98%
+                        </div>
+                        <div class="comment-list item">
+                            <div class="row comment-avatar">
+                                <img src="/images/avatar.png">
+                                <h2>沈俊辉</h2>
+                            </div>
+                            <p>这东西真好</p>
+                            <p>2016-5-14</p>
+                        </div>
+                        <div class="comment-list item">
+                            <div class="row comment-avatar">
+                                <img src="/images/avatar.png">
+                                <h2>沈俊辉</h2>
+                            </div>
+                            <p>这东西真好</p>
+                            <p>2016-5-14</p>
+                        </div>
+                        <div class="comment-list item">
+                            <div class="row comment-avatar">
+                                <img src="/images/avatar.png">
+                                <h2>沈俊辉</h2>
+                            </div>
+                            <p>这东西真好</p>
+                            <p>2016-5-14</p>
+                        </div>
+                        <div class="item read-more">
+                            <p>查看更多评论</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

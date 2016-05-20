@@ -1,6 +1,8 @@
 angular
     .module('common')
-    .constant("BaseUrl", "http://172.29.70.3:8080/")
+    //.constant("BaseUrl", "http://m2mbob.cn:8080/")
+    .constant("BaseUrl", "http://192.168.1.120:8080/")
+    //.constant("BaseUrl", "http://172.17.92.3:8080/")
     .constant('authStatus', {'0':'未审核', '1':'审核不通过', '2':'审核通过'})
     .config(
         function (localStorageServiceProvider, RestangularProvider, BaseUrl) {

@@ -9,12 +9,17 @@ angular
         $scope.tree = [];
 
         supersonic.ui.views.current.whenVisible(function() {
-            //if ($scope.tree.length !== 0) {
-                Restangular.one("category", "tree").getList().then(function(tree) {
-                    $scope.tree = tree.plain();
-                    supersonic.logger.log($scope.tree);
-                });
-            //}
+            Restangular.one("category", "tree").getList().then(function(tree) {
+                $scope.tree = tree.plain();
+            });
         });
+
+        $scope.toMore = function(id){
+            supersonic.ui.layers.push("yitao#category?id="+ id);
+        }
+
+        $scope.toCategory = function(cid){
+            supersonic.ui.layers.push("yitao#products?id="+ cid);
+        }
 
     });

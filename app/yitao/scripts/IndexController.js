@@ -29,4 +29,20 @@ angular
             supersonic.ui.layers.push("yitao#all-category");
         }
 
+        $scope.toNew = function(){
+            supersonic.ui.layers.push("yitao#products?id=17");
+        }
+
+        $scope.toSpecial = function(){
+            supersonic.ui.layers.push("yitao#products?id=18");
+        }
+
+        $scope.toDetail = function(id) {
+            supersonic.ui.layers.push("yitao#detail?id="+ id);
+        }
+
+        $scope.toSearch = function(id) {
+            supersonic.ui.layers.push("yitao#search");
+        }
+
     });

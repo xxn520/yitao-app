@@ -27,6 +27,10 @@ img {
     display: compact;
 }
 
+.bolder {
+    font-weight: bold;
+}
+
 .list {
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
@@ -36,6 +40,15 @@ img {
     padding:0;
     width: 100%;
     height: 100%;
+}
+
+.list>.list-content {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.grid>.list-content {
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .list.bottom {
@@ -310,4 +323,527 @@ a.contact{
     border-left: 5px #f57141 solid;
     border-bottom: 1px #cccccc solid;
     border-top: 1px #cccccc solid;
+}
+
+/*classification*/
+
+.grid {
+    padding: 0 8px;
+}
+
+.grid:after, .list:after {
+    clear: both;
+}
+
+.grid .item {
+    width: 50%;
+    padding: 8px;
+    margin: 0;
+    float: left;
+    border-width: 0;
+}
+
+.grid .item > img {
+    width: 100%;
+}
+
+.list .order-item {
+    padding-left: 150px;
+    min-height: 150px;
+}
+
+.list .order-item > img {
+    position: absolute;
+    left: 16px;
+    top: 16px;
+    max-width: 118px;
+    max-height: 118px;
+    width: 100%;
+    height: 100%;
+}
+
+.grid .order-item > p {
+    text-align: center;
+}
+
+.class-top-font{
+    color: black;
+    font-size: 1.2em;
+    line-height: 250%;
+    text-align: center;
+    margin: 0;
+}
+
+.class-all {
+    margin: 15px auto;
+}
+.class-content-font {
+    color: black;
+    font-size: 1.1em;
+    font-weight: 600;
+    margin: 0px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+span.class-content-price {
+    color: red;
+    font-weight: 600;
+}
+.line-through-price{
+    color: #787878;
+    font-size: .85em;
+    text-decoration: line-through;
+    margin-left: 5px;
+    font-weight: 300;
+}
+.class-block{
+    margin: auto 15px;
+    text-align: center;
+    width: 40%;
+}
+.class-out{
+    width: 100%;
+}
+.class-in{
+    width: 50%;
+    margin: auto;
+    float: left;
+    text-align: center;
+}
+.class-right{
+    margin-top: -58%;
+    margin-right: 20px;
+}
+.class2-name{
+    font-size: 80%;
+    margin-top: 10%;
+    padding-bottom: 3%;
+}
+.class2-price{
+    font-size: 120%;
+    color: red;
+}
+.class2-price span{
+    font-size: 90%;
+    color: #a0a0a0;
+    margin-left: 3%;
+    text-decoration: line-through;
+}
+
+#class2-top-font{
+    color: black;
+    font-size: 110%;
+    line-height: 200%;
+    text-align: center;
+}
+
+.imagetest{
+    height: 200px;
+    position: relative;
+}
+.imagetest .indicators {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+}
+.bgimage{
+    background:no-repeat center center;
+    background-size:100% auto;
+    max-height:200px;
+    height: 100%;
+    width: 100%;
+}
+ul.carousel1.ng-scope{
+    height: 200px;
+}
+
+#detail-block1 .imagetest, #detail-block1 .bgimage, #detail-block1 ul.carousel1.ng-scope {
+    max-height: 400px;
+    min-height: 320px;
+}
+
+span.rn-carousel-control.rn-carousel-control-prev:before, span.rn-carousel-control.rn-carousel-control-next:before {
+    display: inline-block;
+    font-family: "Ionicons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-rendering: auto;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    content: "\f3cf";
+    color: #666;
+}
+span.rn-carousel-control.rn-carousel-control-next:before {
+    content: "\f3d1";
+}
+span.rn-carousel-control.rn-carousel-control-prev.ng-scope{
+    -webkit-transition: opacity .2s ease-out;
+    transition: opacity .2s ease-out;
+    font-size: 2rem;
+    position: absolute;
+    top: 60px;
+    opacity: .75;
+    cursor: pointer;
+}
+span.rn-carousel-control.rn-carousel-control-next.ng-scope{
+    -webkit-transition: opacity .2s ease-out;
+    transition: opacity .2s ease-out;
+    font-size: 2rem;
+    position: absolute;
+    top: 60px;
+    opacity: .75;
+    cursor: pointer;
+}
+div.rn-carousel-indicator span.ng-scope {
+    font-size: 1.2em;
+    color: #999;
+}
+
+#detail-block1{
+    overflow: hidden;
+    width: 100%;
+    height: 90%;
+    border-bottom: 2px solid #cccccc;
+    background-color: white;
+}
+#detail-top-image{
+    width: 100%;
+    height: 80%;
+    padding-bottom: 10px;
+}
+#detail-top-image img{
+    width: 100%;
+    height: 100%;
+}
+.li-right-margin div{
+    width: 55px;
+    height: 55px;
+    background-color: black;
+    opacity: 0.6;
+    position: relative;
+    top: -60px;
+}
+.li-right-margin{
+    margin-right: 5%;
+    width: 16%;
+}
+#detail-block1 li img{
+    width: 100%;
+    height: 100%;
+}
+#detail-block1-nap{
+    /* height: 90px; */
+    margin: 10px;
+}
+#detail-block1-name{
+    font-size: 1.2em;
+}
+#detail-block1-price{
+    color: red;
+    font-size: 1.2em;
+    position: absolute;
+    width: 50%;
+}
+#detail-block1-price span{
+    color: #787878;
+    font-size: 0.9em;
+    text-decoration: line-through;
+    margin-left: 3%;
+}
+#detail-block1-number{
+    background-color: #f3f3f3;
+    width: 41%;
+}
+#detail-block1-number p{
+    padding-top: 10%;
+    padding-bottom: 10%;
+    text-align: center;
+    font-size: 1.4em;
+}
+#detail-block1-number span {
+    margin-left: 30%;
+    margin-right: 30%;
+}
+#detail-block1-left{
+    width: 8%;
+    text-align: center;
+    margin: auto;
+    font-size: 1.4em;
+    color: #aaaaaa;
+}
+#detail-block1-right{
+    width: 8%;
+    text-align: center;
+    margin: auto;
+    font-size: 1.4em;
+    color: #aaaaaa;
+}
+#detail-block1-share{
+    float: right;
+    margin-top: -55px;
+    margin-right: 15px;
+}
+#detail-block1-share p{
+    font-size: 1.1em;
+    color: #AAAAAA;
+}
+#detail-block1-share img{
+    max-width: 20px;
+    margin-left: 5px;
+}
+#detail-block1-like{
+    /* 	float: right; */
+    /* 	margin-top: -55px; */
+    /* 	margin-right: 10px; */
+    /* width: 50px; */
+    text-align: right;
+}
+#detail-block1-like p{
+    color: #AAAAAA;
+}
+#detail-block1-like img{
+    vertical-align: middle;
+    max-width: 22px;
+}
+.detail-block1-last{
+    color: #aaaaaa;
+    font-size: 0.9em;
+}
+.detail-background{
+    height: 10px;
+    width: 100%;
+    background: #f3f3f3;
+    position: relative;
+}
+.detail-block2{
+    position: relative;
+    min-height: 460px;
+}
+.detail-block2 .tab-content {
+    padding-bottom: 60px;
+}
+.detail-block2 .tab-content img {
+    width: 100%;
+}
+.tab-host {
+    overflow-x: hidden;
+    padding: 0;
+    background-color: white;
+}
+.tab-widget{
+    padding: 0px;
+}
+.tab-widget label{
+    position: relative;
+    background: white;
+    z-index: 100;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 0;
+    color: black;
+    font-size: 1.2em;
+    font-weight: 600;
+    border:1px solid #cccccc;
+    margin: 0 -1px;
+
+}
+.tab-widget input[type="radio"]{
+    display: none;
+}
+.tab-widget input[type="radio"]:checked~label, .tab-widget input[type="radio"]:checked+label{
+    border-bottom: 2px solid #e77817;
+}
+.tab-widget input[type="radio"]:checked~.tab-comment, .tab-widget input[type="radio"]:checked+label+.tab-comment {
+    display: block;
+}
+
+.tab-widget input[type="radio"]:checked~.tab-content, .tab-widget input[type="radio"]:checked+label+.tab-content {
+    display: block;
+}
+.tab-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    /* height: 100%; */
+    display: none;
+    background-color: white;
+    padding:10px;
+}
+.tab-content p {
+    line-height: 26px;
+}
+.tab-comment{
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    height: 100%;
+    display: none;
+    background-color: white;
+    min-height: 70%;
+}
+.comment-list{
+    padding: 10px;
+}
+.comment-avatar{
+    height: 30px;
+    max-height: 30px;
+}
+.comment-avatar>img{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.comment-avatar h2{
+    margin-left: 10px;
+    margin-top:4px;
+}
+.tab-comment p {
+    padding-top: 10px;
+}
+.read-more{
+    text-align: center;
+    margin: auto;
+    font-size: 1em;
+}
+
+#detail-block3{
+    margin: 10px -10px;
+    background-color: white;
+    position: relative;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+#detail-block3-top{
+    font-size: 1.2em;
+    color: #aaaaaa;
+    text-align: center;
+}
+#detail-block3 img{
+    width: 100%;
+    height: 100%;
+    max-height:200px;
+    max-width:200px;
+}
+#detail-return{
+    background-color: black;
+}
+#detail-return img{
+    width: 8%;
+    height: 8%;
+    margin-top: 5%;
+}
+.padding0{
+    padding: 0px;
+}
+button.button.button-size.button-full.detail-button.cart-button.bolder{
+    margin-top: 3px;
+}
+a:link{text-decoration:none}
+.black_overlay {
+    /*display: none;*/
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+    z-index:1001;
+}
+#fade{
+    position: fixed;
+}
+.specification-title{
+    font-size: 1.1em;
+}
+.my-need{
+    width: 100%;
+    height: 70vh;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    opacity: 1;
+    margin: 0px;
+}
+.need-close{
+    padding-bottom: 50px;
+}
+.good-specification{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border: 0px;
+    border-radius: 4px;
+    margin-top: 10px;
+    min-width: 60px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    margin-right: 10px;
+}
+.good-specification input{
+    display: none;
+}
+.specification-button{
+    background-color: white;
+    color: #e77817;
+    border: 1px solid #e77817;
+}
+.specification-button.selected {
+    background-color: #e77817;
+    color: white;
+}
+.need-num{
+    padding: 16px;
+}
+.need-number{
+    /* margin-right: 20px; */
+}
+.need-num-title{
+    font-size: 1.1em;
+    line-height: 52px;
+    vertical-align: middle;
+    padding: 0;
+}
+.need-img{
+    max-width: 120px;
+    max-height: 120px;
+    position: absolute;
+    top: -30px;
+    left: 15px;
+    z-index: 2000;
+}
+.need-price{
+    line-height: 40px;
+    font-size: 1.1em;
+    color: #e77817;
+}
+.need-pad{
+    padding-left: 150px;
+}
+
+/*search*/
+
+p.search-keywords{
+    color: black;
+    font-size: 1em;
+}
+p.keywords-clear{
+    color: #e77817;
+    font-size: 1em;
+}
+button.button.button-clear{
+    font-weight: bolder;
+    color: black;
+}
+p.search-history{
+    font-size: 1em;
 }

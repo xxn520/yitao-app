@@ -1,0 +1,16 @@
+<div ng-controller="StarController">
+    <super-navbar>
+        <super-navbar-title>我的收藏</super-navbar-title>
+    </super-navbar>
+    <div class="container">
+        <div class="grid">
+            <div class="list-content">
+                <div class="item order-item" ng-click="toDetail(item.id)" ng-repeat="item in items track by item.id ">
+                    <img ng-src="{{BaseUrl + item.cover_photo}}">
+                    <p class="class-content-font bolder" ng-bind="::item.name"></p>
+                    <p style="min-height: 21px;"><span class="class-content-price" ng-bind="'￥'+ item.price"></span><span class="bolder line-through-price" ng-if="item.discount.discount" ng-bind="'￥' + item.discount.discount"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
