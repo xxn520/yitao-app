@@ -7,7 +7,7 @@
         <div class="list">
             <super-navigate class="item item-icon-right userinfo" location="yitao#user-detail">
                 <img class="useravatar" ng-src="{{BaseUrl + userDetail.avatar}}" src="/images/avatar.png">
-                <h2 ng-bind="::userDetail.username"></h2>
+                <h2 ng-bind="userDetail.nickname ? userDetail.nickname : userDetail.username"></h2>
                 <p ng-bind="userDetail.student_auth.status_CN"></p>
                 <i class="icon super-ios-arrow-right"></i>
             </super-navigate>
@@ -16,7 +16,7 @@
                     <img class="my_icon" src="/images/star.png">
                     <p class="my_tip">我的收藏</p>
                 </super-navigate>
-                <super-navigate class="col my_col">
+                <super-navigate class="col my_col" location="yitao#announcements">
                     <img class="my_icon" src="/images/like.png">
                     <p class="my_tip">我的公告</p>
                 </super-navigate>

@@ -1,0 +1,19 @@
+<div ng-controller="AnnouncementsController">
+    <super-navbar>
+        <super-navbar-title>我的公告</super-navbar-title>
+    </super-navbar>
+    <div class="container">
+        <div class="list" in-view-container>
+            <div class="item" ng-repeat="announcement in announcements track by $index">
+                <h2 ng-bind="::announcement.title"></h2>
+                <p ng-bind="::announcement.detail"></p>
+                <p style="text-align: right">
+                    <span ng-bind="'联系方式:' + announcement.contact"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span ng-bind="announcement.created_date | date : 'yyyy-MM-dd'"></span>
+                </p>
+            </div>
+            <div class="text-center padding" in-view="getItems($inview)" ng-show="loading"><i class="icon super-loading-c"></i> 正在努力加载中...</div>
+        </div>
+    </div>
+    <div class="publish" ng-click="publish()"></div>
+</div>

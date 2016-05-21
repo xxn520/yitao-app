@@ -1,6 +1,6 @@
 angular
     .module('yitao')
-    .controller('FeedbackController', function ($scope, supersonic, Restangular, localStorageService) {
+    .controller('FeedbackController', function ($scope, supersonic, Restangular) {
 
         $scope.feedback = {
             detail: "",

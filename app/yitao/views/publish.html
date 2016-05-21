@@ -1,0 +1,25 @@
+<div ng-controller="PublishController">
+    <super-navbar>
+        <super-navbar-title>发布公告</super-navbar-title>
+    </super-navbar>
+    <div class="container">
+        <div class="list">
+            <div class="item item-input">
+                <span class="input-label">标题</span>
+                <input type="text" name="title" ng-model="announcement.title">
+            </div>
+            <div class="item item-input">
+                <span class="input-label">内容</span>
+                <textarea name="detail" ng-model="announcement.detail" rows="10"></textarea>
+
+            </div>
+            <div class="item item-input">
+                <span class="input-label">联系方式</span>
+                <input type="text" name="contact" ng-model="announcement.contact">
+            </div>
+            <div class="row">
+                <button ng-click="save()" class="col-90 button logout-button">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
