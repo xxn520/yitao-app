@@ -1,0 +1,43 @@
+<div ng-controller="MessageController">
+    <super-navbar>
+        <super-navbar-title>消息</super-navbar-title>
+    </super-navbar>
+    <div class="container">
+        <div class="row tab-host" id="zzz">
+            <div class="col tab-widget">
+                <input type="radio" value="1" id="item-detail" ng-model="tabs">
+                <label for="item-detail">私信</label>
+                <div class="tab-comment list" in-view-container>
+                    <div class="comment-list item" ng-repeat="message in messages track by $index">
+                        <div class="row comment-avatar">
+                            <h2 ng-bind="::message.title"></h2>
+                        </div>
+                        <p ng-bind="::message.detail"></p>
+                        <p style="text-align: right">
+                            <span ng-bind="msgType[message.msgtype]"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span ng-bind="message.created_date | date : 'yyyy-MM-dd'"></span>
+                        </p>
+                    </div>
+                    <div class="text-center padding" in-view="getItems(1, $inview)" ng-show="loading"><i class="icon super-loading-c"></i> 正在努力加载中...</div>
+                </div>
+            </div>
+            <div class="col tab-widget">
+                <input type="radio" value="2" id="item-comment" ng-model="tabs">
+                <label for="item-comment">公告</label>
+                <div class="tab-comment list" in-view-container>
+                    <div class="comment-list item" ng-repeat="announcement in announcements track by $index">
+                        <div class="row comment-avatar">
+                            <h2 ng-bind="::announcement.title"></h2>
+                        </div>
+                        <p ng-bind="::announcement.detail"></p>
+                        <p style="text-align: right">
+                            <span ng-bind="'联系方式:' + announcement.contact"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span ng-bind="announcement.created_date | date : 'yyyy-MM-dd'"></span>
+                        </p>
+                    </div>
+                    <div class="text-center padding" in-view="getItems(2, $inview)" ng-show="loading"><i class="icon super-loading-c"></i> 正在努力加载中...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
